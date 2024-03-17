@@ -375,6 +375,154 @@
   resolved "https://registry.npmmirror.com/@eslint/js/-/js-8.57.0.tgz"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
+"@fluentui/date-time-utilities@^8.5.16":
+  version "8.5.16"
+  resolved "https://registry.npmmirror.com/@fluentui/date-time-utilities/-/date-time-utilities-8.5.16.tgz#cd8177baaaee57d147b30d621f453b68f502aae0"
+  integrity sha512-l+mLfJ2VhdHjBpELLLPDaWgT7GMLynm2aqR7SttbEb6Jh7hc/7ck1MWm93RTb3gYVHYai8SENqimNcvIxHt/zg==
+  dependencies:
+    "@fluentui/set-version" "^8.2.14"
+    tslib "^2.1.0"
+
+"@fluentui/dom-utilities@^2.2.14":
+  version "2.2.14"
+  resolved "https://registry.npmmirror.com/@fluentui/dom-utilities/-/dom-utilities-2.2.14.tgz#3df0435e428d5e289b957425178749a94c545ea9"
+  integrity sha512-+4DVm5sNfJh+l8fM+7ylpOkGNZkNr4X1z1uKQPzRJ1PRhlnvc6vLpWNNicGwpjTbgufSrVtGKXwP5sf++r81lg==
+  dependencies:
+    "@fluentui/set-version" "^8.2.14"
+    tslib "^2.1.0"
+
+"@fluentui/font-icons-mdl2@^8.5.33":
+  version "8.5.33"
+  resolved "https://registry.npmmirror.com/@fluentui/font-icons-mdl2/-/font-icons-mdl2-8.5.33.tgz#530b192c22592ede518cb5ededc44a39eff37844"
+  integrity sha512-SsHPRtE1COeW23RLy7yX/y+zqzbnhm5CVIrA4msG8ZWPFEtQ7sHyVM0Rt9iQs6vMPs1DWdGSQDozTE1LlKvR+Q==
+  dependencies:
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/style-utilities" "^8.10.4"
+    "@fluentui/utilities" "^8.14.0"
+    tslib "^2.1.0"
+
+"@fluentui/foundation-legacy@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.npmmirror.com/@fluentui/foundation-legacy/-/foundation-legacy-8.3.0.tgz#2248bff9e01ff6ed3f1f3ea054d14021648e37db"
+  integrity sha512-Uxrh3KFjo+t2pq4r0mKD1TVHitQwgSN+sWJbzPZvySa6+6lfCpLSBoH24FB+jGNxtOyG6MAk+oEWJBFrCYVpXQ==
+  dependencies:
+    "@fluentui/merge-styles" "^8.6.0"
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/style-utilities" "^8.10.4"
+    "@fluentui/utilities" "^8.14.0"
+    tslib "^2.1.0"
+
+"@fluentui/keyboard-key@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.npmmirror.com/@fluentui/keyboard-key/-/keyboard-key-0.4.14.tgz#858eb9599a29534363ebf5f4a79413a57e4477b5"
+  integrity sha512-XzZHcyFEM20H23h3i15UpkHi2AhRBriXPGAHq0Jm98TKFppXehedjjEFuUsh+CyU5JKBhDalWp8TAQ1ArpNzow==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fluentui/merge-styles@^8.6.0":
+  version "8.6.0"
+  resolved "https://registry.npmmirror.com/@fluentui/merge-styles/-/merge-styles-8.6.0.tgz#e26ed0e4ef42db056e30ecb55889a639cec93751"
+  integrity sha512-Si54VVK/XZQMTPT6aKE/RmqsY7uy9hERreU143Fbqtg9cf+Hr4iJ7FOGC4dXCfrFIXs0KvIHXCh5mtfrEW2aRQ==
+  dependencies:
+    "@fluentui/set-version" "^8.2.14"
+    tslib "^2.1.0"
+
+"@fluentui/react-focus@^8.8.41":
+  version "8.8.41"
+  resolved "https://registry.npmmirror.com/@fluentui/react-focus/-/react-focus-8.8.41.tgz#2bf52f61f12f2dba073177d6d9d4fc120cce732b"
+  integrity sha512-4+eScKfnRPVMywNJU1YkUtE+VchPkX3/SXllsyB649l8I9QOffvgXwPkr/UUUC9UdzQpMP/fXpng/x5zyCDHJw==
+  dependencies:
+    "@fluentui/keyboard-key" "^0.4.14"
+    "@fluentui/merge-styles" "^8.6.0"
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/style-utilities" "^8.10.4"
+    "@fluentui/utilities" "^8.14.0"
+    tslib "^2.1.0"
+
+"@fluentui/react-hooks@^8.6.37":
+  version "8.6.37"
+  resolved "https://registry.npmmirror.com/@fluentui/react-hooks/-/react-hooks-8.6.37.tgz#239d50adbbff8980fa384b09c3939a962b8297e8"
+  integrity sha512-7HdYT0vAutc6FpJGKrDQUMKjDlKRLVXON3S55rQtezCKIJmuuQ0nHaXn4Idyj1XdicRGsP64cYH4dRgX7f3Pwg==
+  dependencies:
+    "@fluentui/react-window-provider" "^2.2.18"
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/utilities" "^8.14.0"
+    tslib "^2.1.0"
+
+"@fluentui/react-portal-compat-context@^9.0.11":
+  version "9.0.11"
+  resolved "https://registry.npmmirror.com/@fluentui/react-portal-compat-context/-/react-portal-compat-context-9.0.11.tgz#5ed1ebc46b54b7192fe8d3948095506b78b05680"
+  integrity sha512-ubvW/ej0O+Pago9GH3mPaxzUgsNnBoqvghNamWjyKvZIViyaXUG6+sgcAl721R+qGAFac+A20akI5qDJz/xtdg==
+  dependencies:
+    "@swc/helpers" "^0.5.1"
+
+"@fluentui/react-window-provider@^2.2.18":
+  version "2.2.18"
+  resolved "https://registry.npmmirror.com/@fluentui/react-window-provider/-/react-window-provider-2.2.18.tgz#8881f1f5f5d70010d60f54965a7c6c917e3e0f39"
+  integrity sha512-nBKqxd0P8NmIR0qzFvka1urE2LVbUm6cse1I1T7TcOVNYa5jDf5BrO06+JRZfwbn00IJqOnIVoP0qONqceypWQ==
+  dependencies:
+    "@fluentui/set-version" "^8.2.14"
+    tslib "^2.1.0"
+
+"@fluentui/react@^8.115.7":
+  version "8.115.7"
+  resolved "https://registry.npmmirror.com/@fluentui/react/-/react-8.115.7.tgz#370cd261682acf12621bb520c561da4381b545ad"
+  integrity sha512-y4WpDCr6mzhzmsr6FzV0nqQGds6gL3K2MoV7X8z+fQI4vpvxyeKgXZYwD5P+eGHlrOvpilrXeRlDAH7cxaw2Kw==
+  dependencies:
+    "@fluentui/date-time-utilities" "^8.5.16"
+    "@fluentui/font-icons-mdl2" "^8.5.33"
+    "@fluentui/foundation-legacy" "^8.3.0"
+    "@fluentui/merge-styles" "^8.6.0"
+    "@fluentui/react-focus" "^8.8.41"
+    "@fluentui/react-hooks" "^8.6.37"
+    "@fluentui/react-portal-compat-context" "^9.0.11"
+    "@fluentui/react-window-provider" "^2.2.18"
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/style-utilities" "^8.10.4"
+    "@fluentui/theme" "^2.6.42"
+    "@fluentui/utilities" "^8.14.0"
+    "@microsoft/load-themed-styles" "^1.10.26"
+    tslib "^2.1.0"
+
+"@fluentui/set-version@^8.2.14":
+  version "8.2.14"
+  resolved "https://registry.npmmirror.com/@fluentui/set-version/-/set-version-8.2.14.tgz#e5e63e77e1016a910b8495dfa37505bdbe91059e"
+  integrity sha512-f/QWJnSeyfAjGAqq57yjMb6a5ejPlwfzdExPmzFBuEOuupi8hHbV8Yno12XJcTW4I0KXEQGw+PUaM1aOf/j7jw==
+  dependencies:
+    tslib "^2.1.0"
+
+"@fluentui/style-utilities@^8.10.4":
+  version "8.10.4"
+  resolved "https://registry.npmmirror.com/@fluentui/style-utilities/-/style-utilities-8.10.4.tgz#60612ccf2f901289087f15f741c10332d28fe759"
+  integrity sha512-EwQydL1tyZnhxuiW4r1IMeKTQCK7qh3acekNhdfJwPTCV5JLAU5GvHC3PqqUFjxEct9Ywn2gBWVcj54a2EMuPA==
+  dependencies:
+    "@fluentui/merge-styles" "^8.6.0"
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/theme" "^2.6.42"
+    "@fluentui/utilities" "^8.14.0"
+    "@microsoft/load-themed-styles" "^1.10.26"
+    tslib "^2.1.0"
+
+"@fluentui/theme@^2.6.42":
+  version "2.6.42"
+  resolved "https://registry.npmmirror.com/@fluentui/theme/-/theme-2.6.42.tgz#ec172794680ec6fa598619046aee505af4eb01a7"
+  integrity sha512-+9XTRjpklCn7SdhxLZNTXqugmbp9Ux6mhfLVD2pIZ2utAbskwQ9pIWTzyR5BVeZFCUG6nt0JxhfA7EJ9rcWygg==
+  dependencies:
+    "@fluentui/merge-styles" "^8.6.0"
+    "@fluentui/set-version" "^8.2.14"
+    "@fluentui/utilities" "^8.14.0"
+    tslib "^2.1.0"
+
+"@fluentui/utilities@^8.14.0":
+  version "8.14.0"
+  resolved "https://registry.npmmirror.com/@fluentui/utilities/-/utilities-8.14.0.tgz#a6b6790720bac1e10935a779e73eb5bf15b47cdd"
+  integrity sha512-H/YVmo5rvzYjlNd3hzXXQnKLR9LN+BAP9hE3r/ZjXgb1RwAlMX1cxfrDn1OOHD2P4GN3PZI4MN70exRQOASbjA==
+  dependencies:
+    "@fluentui/dom-utilities" "^2.2.14"
+    "@fluentui/merge-styles" "^8.6.0"
+    "@fluentui/set-version" "^8.2.14"
+    tslib "^2.1.0"
+
 "@humanwhocodes/config-array@^0.11.14":
   version "0.11.14"
   resolved "https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.11.14.tgz"
@@ -426,6 +574,11 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@microsoft/load-themed-styles@^1.10.26":
+  version "1.10.295"
+  resolved "https://registry.npmmirror.com/@microsoft/load-themed-styles/-/load-themed-styles-1.10.295.tgz#d3c8d7ab186f422727ba112d6ebe5fe8e41051d9"
+  integrity sha512-W+IzEBw8a6LOOfRJM02dTT7BDZijxm+Z7lhtOAz1+y9vQm1Kdz9jlAO+qCEKsfxtUOmKilW8DIRqFw2aUgKeGg==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmmirror.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"
@@ -446,6 +599,16 @@
   dependencies:
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
+
+"@reduxjs/toolkit@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.npmmirror.com/@reduxjs/toolkit/-/toolkit-2.2.1.tgz#3dce4906fb33da9e0122468ef21438dd7f2277a9"
+  integrity sha512-8CREoqJovQW/5I4yvvijm/emUiCCmcs4Ev4XPWd4mizSO+dD3g5G6w34QK5AGeNrSH7qM8Fl66j4vuV7dpOdkw==
+  dependencies:
+    immer "^10.0.3"
+    redux "^5.0.1"
+    redux-thunk "^3.1.0"
+    reselect "^5.0.1"
 
 "@rollup/rollup-android-arm-eabi@4.13.0":
   version "4.13.0"
@@ -516,6 +679,13 @@
   version "4.6.0"
   resolved "https://registry.npmmirror.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
   integrity sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==
+
+"@swc/helpers@^0.5.1":
+  version "0.5.6"
+  resolved "https://registry.npmmirror.com/@swc/helpers/-/helpers-0.5.6.tgz#d16d8566b7aea2bef90d059757e2d77f48224160"
+  integrity sha512-aYX01Ke9hunpoCexYAgQucEpARGQ5w/cqHFrIR+e9gdKb1QWTsVJuTJ2ozQzIAxLyRQe/m+2RqzkyOOGiMKRQA==
+  dependencies:
+    tslib "^2.4.0"
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
@@ -633,6 +803,11 @@
   version "7.5.8"
   resolved "https://registry.npmmirror.com/@types/semver/-/semver-7.5.8.tgz"
   integrity sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==
+
+"@types/use-sync-external-store@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npmmirror.com/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz#b6725d5f4af24ace33b36fafd295136e75509f43"
+  integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
 
 "@types/yauzl@^2.9.1":
   version "2.10.3"
@@ -1004,6 +1179,14 @@ electron-to-chromium@^1.4.668:
   version "1.4.705"
   resolved "https://registry.npmmirror.com/electron-to-chromium/-/electron-to-chromium-1.4.705.tgz"
   integrity sha512-LKqhpwJCLhYId2VVwEzFXWrqQI5n5zBppz1W9ehhTlfYU8CUUW6kClbN8LHF/v7flMgRdETS772nqywJ+ckVAw==
+
+electron-window-state@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npmmirror.com/electron-window-state/-/electron-window-state-5.0.3.tgz#4f36d09e3f953d87aff103bf010f460056050aa8"
+  integrity sha512-1mNTwCfkolXl3kMf50yW3vE2lZj0y92P/HYWFBrb+v2S/pCka5mdwN3cagKm458A7NjndSwijynXgcLWRodsVg==
+  dependencies:
+    jsonfile "^4.0.0"
+    mkdirp "^0.5.1"
 
 electron@^29.1.4:
   version "29.1.4"
@@ -1476,6 +1659,11 @@ ignore@^5.2.0, ignore@^5.2.4:
   resolved "https://registry.npmmirror.com/ignore/-/ignore-5.3.1.tgz"
   integrity sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==
 
+immer@^10.0.3:
+  version "10.0.4"
+  resolved "https://registry.npmmirror.com/immer/-/immer-10.0.4.tgz#09af41477236b99449f9d705369a4daaf780362b"
+  integrity sha512-cuBuGK40P/sk5IzWa9QPUaAdvPHjkk1c+xYsd9oZw+YQQEV+10G0P5uMpGctZZKnyQ+ibRO08bD25nWLmYi2pw==
+
 import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.npmmirror.com/import-fresh/-/import-fresh-3.3.0.tgz"
@@ -1675,6 +1863,18 @@ minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   dependencies:
     brace-expansion "^1.1.7"
 
+minimist@^1.2.6:
+  version "1.2.8"
+  resolved "https://registry.npmmirror.com/minimist/-/minimist-1.2.8.tgz#c1a464e7693302e082a075cee0c057741ac4772c"
+  integrity sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==
+
+mkdirp@^0.5.1:
+  version "0.5.6"
+  resolved "https://registry.npmmirror.com/mkdirp/-/mkdirp-0.5.6.tgz#7def03d2432dcae4ba1d611445c48396062255f6"
+  integrity sha512-FP+p8RB8OWpF3YZBCrP5gtADmtXApB5AMLn+vdyA+PyxCjrCs00mjyUozssO33cwDeT3wNGdLxJ5M//YqtHAJw==
+  dependencies:
+    minimist "^1.2.6"
+
 ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.npmmirror.com/ms/-/ms-2.1.2.tgz"
@@ -1835,6 +2035,14 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-redux@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.npmmirror.com/react-redux/-/react-redux-9.1.0.tgz#46a46d4cfed4e534ce5452bb39ba18e1d98a8197"
+  integrity sha512-6qoDzIO+gbrza8h3hjMA9aq4nwVFCKFtY2iLxCtVT38Swyy2C/dJCGBXHeHLtx6qlg/8qzc2MrhOeduf5K32wQ==
+  dependencies:
+    "@types/use-sync-external-store" "^0.0.3"
+    use-sync-external-store "^1.0.0"
+
 react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://registry.npmmirror.com/react-refresh/-/react-refresh-0.14.0.tgz"
@@ -1846,6 +2054,21 @@ react@^18.2.0:
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
+
+redux-thunk@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npmmirror.com/redux-thunk/-/redux-thunk-3.1.0.tgz#94aa6e04977c30e14e892eae84978c1af6058ff3"
+  integrity sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==
+
+redux@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmmirror.com/redux/-/redux-5.0.1.tgz#97fa26881ce5746500125585d5642c77b6e9447b"
+  integrity sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==
+
+reselect@^5.0.1:
+  version "5.1.0"
+  resolved "https://registry.npmmirror.com/reselect/-/reselect-5.1.0.tgz#c479139ab9dd91be4d9c764a7f3868210ef8cd21"
+  integrity sha512-aw7jcGLDpSgNDyWBQLv2cedml85qd95/iszJjN988zX1t7AVRJi19d9kto5+W7oCfQ94gyo40dVbT6g2k4/kXg==
 
 resolve-alpn@^1.0.0:
   version "1.2.1"
@@ -2030,6 +2253,11 @@ ts-api-utils@^1.0.1:
   resolved "https://registry.npmmirror.com/ts-api-utils/-/ts-api-utils-1.3.0.tgz"
   integrity sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==
 
+tslib@^2.1.0, tslib@^2.4.0:
+  version "2.6.2"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
+  integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
+
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
   resolved "https://registry.npmmirror.com/type-check/-/type-check-0.4.0.tgz"
@@ -2076,6 +2304,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-sync-external-store@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.npmmirror.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 vite-plugin-electron@^0.28.3:
   version "0.28.3"

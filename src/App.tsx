@@ -1,16 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-
+import { useState } from "react";
+import Navbar from "./component/nav";
+import { useSelector, useDispatch } from "react-redux";
+import { RootStore } from "./store/index";
+import { increment } from "./store/appSlice";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { count } = useSelector((store: RootStore) => store.appReduce);
+
+  const dispatch = useDispatch();
+
+  const incrementHandl = () => {
+    dispatch(increment());
+  };
 
   return (
-    <>
-      我是一个electron应用
-    </>
-  )
+    <div>
+      <Navbar />
+      <p>{count}</p>
+      <button onClick={incrementHandl}>点击+1</button>
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -1,31 +1,45 @@
 import { app, BrowserWindow } from "electron";
+// 如果你使用 BrowserWindow 来创建多个窗口，每个窗口都会被当作一个独立的进程运行。这可能会影响应用程序的性能和稳定性。要解决这个问题，可以使用 electron-window-state 模块来管理窗口状态，并确保所有窗口在同一个进程中运行
+import windowStateKeeper from "electron-window-state";
 
 class WindowManager {
-  mainWindow: BrowserWindow | null = null;
+  mainWindow!: BrowserWindow;
+
+  private mainWindowState!: windowStateKeeper.State;
 
   constructor() {
     this.init();
   }
 
   private init() {
-    this.setListeners();
+    app.whenReady().then(() => {
+      this.mainWindowState = windowStateKeeper({
+        defaultHeight: 1000,
+        defaultWidth: 800,
+      });
+      this.setListeners();
+    });
   }
 
   private setListeners() {
-    app.whenReady().then(() => {
-      this.createWindow();
-    });
+    this.createWindow();
   }
 
   createWindow() {
     const createWindow = () => {
       this.mainWindow = new BrowserWindow({
-        height: 600,
-        width: 800,
+        height: this.mainWindowState.width,
+        width: this.mainWindowState.height,
+        x: this.mainWindowState.x,
+        y: this.mainWindowState.y,
         title: "Blog Helper",
+        titleBarStyle: "hiddenInset",  // 在mac端隐藏标题栏
+        frame:process.platform === "darwin"   // 在mac端不隐藏navbar
       });
 
       this.mainWindow.loadURL("http://localhost:5173/");
+
+      this.mainWindowState.manage(this.mainWindow);
     };
 
     createWindow();
