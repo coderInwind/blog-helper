@@ -5,5 +5,3 @@ const winManager =  new WindowManager()
 
 
 
-
-console.log(process.platform);

@@ -11,6 +11,7 @@ import require$$0 from "constants";
 import require$$0$1 from "stream";
 import require$$4 from "util";
 import require$$5 from "assert";
+import path$2 from "node:path";
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -1198,23 +1199,22 @@ class WindowManager {
     this.createWindow();
   }
   createWindow() {
-    const createWindow = () => {
-      this.mainWindow = new BrowserWindow({
-        height: this.mainWindowState.width,
-        width: this.mainWindowState.height,
-        x: this.mainWindowState.x,
-        y: this.mainWindowState.y,
-        title: "Blog Helper",
-        titleBarStyle: "hiddenInset",
-        // 在mac端隐藏标题栏
-        frame: process.platform === "darwin"
-        // 在mac端不隐藏navbar
-      });
-      this.mainWindow.loadURL("http://localhost:5173/");
-      this.mainWindowState.manage(this.mainWindow);
-    };
-    createWindow();
+    this.mainWindow = new BrowserWindow({
+      height: this.mainWindowState.width,
+      width: this.mainWindowState.height,
+      x: this.mainWindowState.x,
+      y: this.mainWindowState.y,
+      title: "Blog Helper",
+      titleBarStyle: "hiddenInset",
+      // 在mac端隐藏标题栏
+      frame: process.platform === "darwin",
+      // 在mac端不隐藏navbar
+      webPreferences: {
+        preload: path$2.join(app.getAppPath(), "src/electron/preload.ts")
+      }
+    });
+    this.mainWindow.loadURL("http://localhost:5173/");
+    this.mainWindowState.manage(this.mainWindow);
   }
 }
 new WindowManager();
-console.log(process.platform);
