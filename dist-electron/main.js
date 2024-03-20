@@ -4,7 +4,7 @@ var __publicField = (obj, key, value) => {
   __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
   return value;
 };
-import require$$1$1, { app, BrowserWindow } from "electron";
+import require$$1$1, { ipcMain, app, BrowserWindow } from "electron";
 import require$$0$2 from "path";
 import require$$1 from "fs";
 import require$$0 from "constants";
@@ -1180,6 +1180,17 @@ var electronWindowState = function(options) {
   };
 };
 const windowStateKeeper = /* @__PURE__ */ getDefaultExportFromCjs(electronWindowState);
+const setUtilsListener = (mainWindow) => {
+  ipcMain.handle("minimize-window", () => {
+    mainWindow.minimize();
+  });
+  ipcMain.handle("maximize-window", () => {
+    mainWindow.maximize();
+  });
+  ipcMain.handle("close-window", () => {
+    mainWindow.close();
+  });
+};
 class WindowManager {
   constructor() {
     __publicField(this, "mainWindow");
@@ -1192,11 +1203,12 @@ class WindowManager {
         defaultHeight: 1e3,
         defaultWidth: 800
       });
+      this.createWindow();
       this.setListeners();
     });
   }
   setListeners() {
-    this.createWindow();
+    setUtilsListener(this.mainWindow);
   }
   createWindow() {
     this.mainWindow = new BrowserWindow({
@@ -1210,7 +1222,7 @@ class WindowManager {
       frame: process.platform === "darwin",
       // 在mac端不隐藏navbar
       webPreferences: {
-        preload: path$2.join(app.getAppPath(), "src/electron/preload.ts")
+        preload: path$2.join(app.getAppPath(), "dist-electron/preload.mjs")
       }
     });
     this.mainWindow.loadURL("http://localhost:5173/");
