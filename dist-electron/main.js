@@ -1217,4 +1217,3 @@ class WindowManager {
   }
 }
 new WindowManager();
-console.log(process.platform);
