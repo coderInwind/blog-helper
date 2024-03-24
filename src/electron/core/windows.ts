@@ -25,7 +25,7 @@ class WindowManager {
   }
 
   private setListeners() {
-    setUtilsListener(this.mainWindow);
+    setUtilsListener(this);
   }
 
   createWindow() {
@@ -45,6 +45,32 @@ class WindowManager {
     this.mainWindow.loadURL("http://localhost:5173/");
 
     this.mainWindowState.manage(this.mainWindow);
+
+    this.mainWindow.on("maximize", () => {
+      this.mainWindow.webContents.send("maximized");
+    });
+
+    this.mainWindow.on("minimize", () => {
+      this.mainWindow.webContents.send("mainimized");
+    });
+
+    this.mainWindow.on("unmaximize",()=>{
+      this.mainWindow.webContents.send("unmaximized")
+    })
+  }
+
+  hasWindow() {
+    return this.mainWindow !== null && !this.mainWindow.isDestroyed();
+  }
+
+  zoom() {
+    if (this.hasWindow()) {
+      if (this.mainWindow.isMaximized()) {
+        this.mainWindow.unmaximize();
+      } else {
+        this.mainWindow.maximize();
+      }
+    }
   }
 }
 

@@ -1,8 +1,10 @@
 .nav-wrapper {
   height: 30px;
   display: flex;
+  -webkit-app-region: drag;
 
   .btn {
+    -webkit-app-region: none;
     width: 50px;
     display: flex;
     align-items: center;

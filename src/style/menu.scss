@@ -1,0 +1,52 @@
+.menu-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #fff;
+  backdrop-filter: var(--blur);
+  box-shadow: 5px 0 25px #0004;
+  transition: clip-path var(--transition-timing) 0.367s,
+    opacity cubic-bezier(0, 0, 0.2, 1) 0.367s;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  z-index: 10;
+
+  .btn-group {
+    height: 32px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .btn {
+      text-align: center;
+      width: 38px;
+      height: 100%;
+      line-height: 32px;
+      user-select: none;
+      &:hover {
+        cursor: pointer;
+        background-color: #e9e8e7;
+      }
+    }
+  }
+
+  .article-search {
+    width: 100%;
+    -webkit-app-region: none;
+  }
+
+  .list-wrapper {
+    width: 100%;
+    .title {
+      font-size: 13px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.show-plane {
+  opacity: 1;
+  clip-path: inset(0 -50px 0 0);
+}

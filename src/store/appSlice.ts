@@ -1,23 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface CounterState {
-  count: number;
+interface AppState {
+  planeOn: boolean;
 }
 
-const initState: CounterState = {
-  count: 0,
+const initAppState: AppState = {
+  planeOn: false,
 };
 
 export const appSlice = createSlice({
   name: "app",
-  initialState: initState,
+  initialState: initAppState,
   reducers: {
-    increment(state) {
-      state.count += 1;
+    changePlaneState(state, { payload }) {
+      state.planeOn = payload;
     },
   },
 });
 
 export default appSlice.reducer;
 
-export const { increment } = appSlice.actions;
+export const { changePlaneState } = appSlice.actions;

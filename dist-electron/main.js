@@ -1180,15 +1180,22 @@ var electronWindowState = function(options) {
   };
 };
 const windowStateKeeper = /* @__PURE__ */ getDefaultExportFromCjs(electronWindowState);
-const setUtilsListener = (mainWindow) => {
+const setUtilsListener = (manager) => {
   ipcMain.handle("minimize-window", () => {
-    mainWindow.minimize();
+    if (manager.hasWindow()) {
+      manager.mainWindow.minimize();
+    }
   });
   ipcMain.handle("maximize-window", () => {
-    mainWindow.maximize();
+    manager.zoom();
   });
   ipcMain.handle("close-window", () => {
-    mainWindow.close();
+    if (manager.hasWindow()) {
+      manager.mainWindow.close();
+    }
+  });
+  ipcMain.on("is-maximized", (event) => {
+    event.returnValue = false;
   });
 };
 class WindowManager {
@@ -1208,7 +1215,7 @@ class WindowManager {
     });
   }
   setListeners() {
-    setUtilsListener(this.mainWindow);
+    setUtilsListener(this);
   }
   createWindow() {
     this.mainWindow = new BrowserWindow({
@@ -1227,6 +1234,27 @@ class WindowManager {
     });
     this.mainWindow.loadURL("http://localhost:5173/");
     this.mainWindowState.manage(this.mainWindow);
+    this.mainWindow.on("maximize", () => {
+      this.mainWindow.webContents.send("maximized");
+    });
+    this.mainWindow.on("minimize", () => {
+      this.mainWindow.webContents.send("mainimized");
+    });
+    this.mainWindow.on("unmaximize", () => {
+      this.mainWindow.webContents.send("unmaximized");
+    });
+  }
+  hasWindow() {
+    return this.mainWindow !== null && !this.mainWindow.isDestroyed();
+  }
+  zoom() {
+    if (this.hasWindow()) {
+      if (this.mainWindow.isMaximized()) {
+        this.mainWindow.unmaximize();
+      } else {
+        this.mainWindow.maximize();
+      }
+    }
   }
 }
 new WindowManager();
