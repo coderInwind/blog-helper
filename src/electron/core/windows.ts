@@ -3,6 +3,7 @@ import { app, BrowserWindow, ipcMain } from "electron";
 import windowStateKeeper from "electron-window-state";
 import path from "node:path";
 import setUtilsListener from "./utils";
+import setSettingsListener from "./settings"
 
 class WindowManager {
   mainWindow!: BrowserWindow;
@@ -26,6 +27,7 @@ class WindowManager {
 
   private setListeners() {
     setUtilsListener(this);
+    setSettingsListener(this)
   }
 
   createWindow() {

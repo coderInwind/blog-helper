@@ -13,7 +13,7 @@ export const appSlice = createSlice({
   initialState: initAppState,
   reducers: {
     changePlaneState(state, { payload }) {
-      state.planeOn = payload;
+      window.settings.setDefaultMenu(payload);
     },
   },
 });

@@ -32,4 +32,11 @@ const utilsBridge = {
     });
   }
 };
+const settingsBridge = {
+  setDefaultMenu: (state) => {
+    console.log(state);
+    electron.ipcRenderer.invoke("set-menu");
+  }
+};
 electron.contextBridge.exposeInMainWorld("utils", utilsBridge);
+electron.contextBridge.exposeInMainWorld("settings", settingsBridge);

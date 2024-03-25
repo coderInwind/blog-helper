@@ -1198,6 +1198,11 @@ const setUtilsListener = (manager) => {
     event.returnValue = false;
   });
 };
+function setSettingsListener(manager) {
+  ipcMain.handle("set-menu", () => {
+    console.log(1231313123);
+  });
+}
 class WindowManager {
   constructor() {
     __publicField(this, "mainWindow");
@@ -1216,6 +1221,7 @@ class WindowManager {
   }
   setListeners() {
     setUtilsListener(this);
+    setSettingsListener();
   }
   createWindow() {
     this.mainWindow = new BrowserWindow({
