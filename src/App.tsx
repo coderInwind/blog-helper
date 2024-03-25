@@ -3,6 +3,7 @@ import Navbar from "./component/nav";
 import { useSelector, useDispatch } from "react-redux";
 import { RootStore } from "./store/index";
 import { increment } from "./store/appSlice";
+import "./index.scss"
 
 function App() {
   const { count } = useSelector((store: RootStore) => store.appReduce);
