@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react";
 import "../style/nav.scss";
+import { WindowStateListenerType } from "../schema-types";
+import {useDispatch} from "react-redux"
+import {toggleMenu} from "../store/appSlice"
 
 export default function Navbar() {
+  const [isMaximized, setIsMaximized] = useState(false);
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    setIsMaximized(window.utils.isMaximized());
+    window.utils.addWindowStateListener(WindowStateListencer);
+  }, []);
+
   // 最小化
   const minimize = () => {
     window.utils.minimize();
@@ -8,19 +20,44 @@ export default function Navbar() {
 
   const maximize = () => {
     window.utils.maximize();
+    setIsMaximized(!isMaximized);
   };
 
-  const close = ()=>{
-    window.utils.close()
+  const close = () => {
+    window.utils.close();
+  };
+
+  const WindowStateListencer = (
+    type: WindowStateListenerType,
+    state: boolean
+  ) => {
+    switch (type) {
+      case WindowStateListenerType.Maximized:
+        setIsMaximized(state);
+        break
+
+      case WindowStateListenerType.Minimiaed:
+        setIsMaximized(state)
+        break
+
+      case WindowStateListenerType.Unmaximized:
+        setIsMaximized(state)
+     }
+  };
+
+
+  const openPlane = ()=>{
+    dispatch(toggleMenu(true))
   }
 
   return (
     <div className="nav-wrapper">
       <div className="left-bar">
-        <div className="btn">
+        <div className="btn" onClick={openPlane}>
           <i className="iconfont icon-hanbaobao"></i>
         </div>
-        <span className="title">最新文章</span>
+
+        <span className="title"> <span>最新笔记</span> </span>
       </div>
 
       <div className="right-bar">
@@ -39,7 +76,11 @@ export default function Navbar() {
         </div>
 
         <div className="btn" onClick={maximize}>
-          <i className="iconfont icon-chuangkouhua"></i>
+          {isMaximized ? (
+            <i className="iconfont icon-chuangkouhua1"></i>
+          ) : (
+            <i className="iconfont icon-chuangkouhua"></i>
+          )}
         </div>
 
         <div className="btn" onClick={close}>

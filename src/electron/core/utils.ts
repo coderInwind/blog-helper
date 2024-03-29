@@ -1,17 +1,26 @@
 import { ipcMain, BrowserWindow } from "electron";
+import WindowManager from "./windows";
 
-const setUtilsListener = (mainWindow: BrowserWindow) => {
+const setUtilsListener = (manager: WindowManager) => {
   ipcMain.handle("minimize-window", () => {
-    mainWindow.minimize();
+    if(manager.hasWindow()){
+      manager.mainWindow.minimize();
+    }
   });
 
   ipcMain.handle("maximize-window", () => {
-    mainWindow.maximize();
+    manager.zoom()
   });
 
   ipcMain.handle("close-window", () => {
-    mainWindow.close();
+    if(manager.hasWindow()){
+      manager.mainWindow.close();
+    }
   });
+
+  ipcMain.on("is-maximized",(event)=>{
+     event.returnValue = false
+  })
 };
 
 export default setUtilsListener;

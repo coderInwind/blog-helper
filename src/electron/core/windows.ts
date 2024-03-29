@@ -3,6 +3,7 @@ import { app, BrowserWindow, ipcMain } from "electron";
 import windowStateKeeper from "electron-window-state";
 import path from "node:path";
 import setUtilsListener from "./utils";
+import setSettingsListener from "./settings"
 
 class WindowManager {
   mainWindow!: BrowserWindow;
@@ -25,7 +26,8 @@ class WindowManager {
   }
 
   private setListeners() {
-    setUtilsListener(this.mainWindow);
+    setUtilsListener(this);
+    setSettingsListener(this)
   }
 
   createWindow() {
@@ -45,12 +47,32 @@ class WindowManager {
     this.mainWindow.loadURL("http://localhost:5173/");
 
     this.mainWindowState.manage(this.mainWindow);
+
+    this.mainWindow.on("maximize", () => {
+      this.mainWindow.webContents.send("maximized");
+    });
+
+    this.mainWindow.on("minimize", () => {
+      this.mainWindow.webContents.send("mainimized");
+    });
+
+    this.mainWindow.on("unmaximize",()=>{
+      this.mainWindow.webContents.send("unmaximized")
+    })
   }
 
+  hasWindow() {
+    return this.mainWindow !== null && !this.mainWindow.isDestroyed();
+  }
 
-
-  zoom(){
-    
+  zoom() {
+    if (this.hasWindow()) {
+      if (this.mainWindow.isMaximized()) {
+        this.mainWindow.unmaximize();
+      } else {
+        this.mainWindow.maximize();
+      }
+    }
   }
 }
 

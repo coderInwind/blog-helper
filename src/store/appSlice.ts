@@ -1,23 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface CounterState {
-  count: number;
+interface AppState {
+  planeOn: boolean;
 }
 
-const initState: CounterState = {
-  count: 0,
+const initAppState: AppState = {
+  planeOn: false,
 };
 
 export const appSlice = createSlice({
   name: "app",
-  initialState: initState,
+  initialState: initAppState,
   reducers: {
-    increment(state) {
-      state.count += 1;
+    toggleMenu(state, { payload }) {     
+      state.planeOn = payload 
+      window.settings.setDefaultMenu(state.planeOn);
     },
   },
 });
 
 export default appSlice.reducer;
 
-export const { increment } = appSlice.actions;
+export const { toggleMenu } = appSlice.actions;

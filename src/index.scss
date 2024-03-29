@@ -1,1 +1,9 @@
 @import url(//at.alicdn.com/t/c/font_4460604_e390tst9t8i.css);
+
+:root {
+  --transition-timing: cubic-bezier(0.1, 0.9, 0.2, 1);
+}
+
+.app-wrapper{
+  height: 100vh;
+}

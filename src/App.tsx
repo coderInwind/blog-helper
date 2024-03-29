@@ -1,24 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./component/nav";
-import { useSelector, useDispatch } from "react-redux";
-import { RootStore } from "./store/index";
-import { increment } from "./store/appSlice";
+import Menu from "./component/menu"
+import Content from "./component/content";
 import "./index.scss"
 
+
 function App() {
-  const { count } = useSelector((store: RootStore) => store.appReduce);
-
-  const dispatch = useDispatch();
-
-  const incrementHandl = () => {
-    dispatch(increment());
-  };
-
   return (
-    <div>
+    <div className="app-wrapper">
       <Navbar />
-      <p>{count}</p>
-      <button onClick={incrementHandl}>点击+1</button>
+      <Menu />
+
+      <Content />
     </div>
   );
 }
