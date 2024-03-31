@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../style/nav.scss";
 import { WindowStateListenerType } from "../schema-types";
 import {useDispatch} from "react-redux"
-import {changePlaneState} from "../store/appSlice"
+import {toggleMenu} from "../store/appSlice"
 
 export default function Navbar() {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -47,7 +47,7 @@ export default function Navbar() {
 
 
   const openPlane = ()=>{
-    dispatch(changePlaneState(true))
+    dispatch(toggleMenu(true))
   }
 
   return (
@@ -57,7 +57,7 @@ export default function Navbar() {
           <i className="iconfont icon-hanbaobao"></i>
         </div>
 
-        <span className="title"> <span>最新文章</span> </span>
+        <span className="title"> <span>最新笔记</span> </span>
       </div>
 
       <div className="right-bar">

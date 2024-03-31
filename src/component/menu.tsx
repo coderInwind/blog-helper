@@ -4,15 +4,17 @@ import { Nav } from "@fluentui/react/lib/Nav";
 import "../style/menu.scss";
 import { Icon } from "@fluentui/react/lib/Icon";
 import { useSelector, useDispatch } from "react-redux";
-import { changePlaneState } from "../store/appSlice";
+import { toggleMenu } from "../store/appSlice";
 import { RootStore } from "../store/index";
+import {getBlogList} from "../api/blog"
+import { useEffect } from "react";
 
 export default function menu() {
   const { planeOn } = useSelector((state: RootStore) => state.appReduce);
 
   const dispatch = useDispatch();
   const closeLeftPlane = () => {
-    dispatch(changePlaneState(false));
+    dispatch(toggleMenu(false));
   };
 
   const blogGroup = [
@@ -33,6 +35,16 @@ export default function menu() {
       ],
     },
   ];
+
+
+  useEffect(()=>{
+
+    getBlogList().then(res=>{
+      console.log(123123,res);
+      
+    })
+
+  },[])
 
   return (
     <div className={["menu-wrapper", planeOn ? "show-plane" : ""].join(" ")}>

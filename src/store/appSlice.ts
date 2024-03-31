@@ -5,19 +5,20 @@ interface AppState {
 }
 
 const initAppState: AppState = {
-  planeOn: false,
+  planeOn: window.settings.getDefaultMenu()
 };
 
 export const appSlice = createSlice({
   name: "app",
   initialState: initAppState,
   reducers: {
-    changePlaneState(state, { payload }) {
-      window.settings.setDefaultMenu(payload);
+    toggleMenu(state, { payload }) {     
+      state.planeOn = payload 
+      window.settings.setDefaultMenu(state.planeOn);
     },
   },
 });
 
 export default appSlice.reducer;
 
-export const { changePlaneState } = appSlice.actions;
+export const { toggleMenu } = appSlice.actions;
